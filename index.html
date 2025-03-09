@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ظافر علي - لاعب كرة قدم</title>
+  <meta name="description" content="ظافر علي - لاعب كرة قدم محترف ولاعب وسط. تابع رحلته وإنجازاته.">
+  <!-- إضافة خط Tajawal -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- إضافة Font Awesome للأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #34495e); /* خلفية بتدرج رمادي وأزرق داكن */
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 5px solid #95a5a6; /* إطار رمادي */
+      object-fit: cover;
+      box-shadow: 0 0 20px rgba(149, 165, 166, 0.7); /* ظل رمادي */
+      animation: fadeIn 1s ease-in-out;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 20px 0 10px;
+      color: #ecf0f1; /* لون رمادي فاتح */
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #bdc3c7; /* لون رمادي فاتح */
+      animation: fadeIn 2s ease-in-out;
+    }
+    .social-links {
+      display: flex;
+      gap: 20px;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+    .social-links a {
+      width: 50px;
+      height: 50px;
+      background: #95a5a6; /* خلفية رمادية */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2c3e50; /* لون نص داكن */
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(149, 165, 166, 0.4); /* ظل رمادي */
+    }
+    .social-links a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba(149, 165, 166, 0.7); /* ظل رمادي عند التمرير */
+    }
+    .social-links a img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+    .info-section {
+      background: rgba(255, 255, 255, 0.1); /* خلفية شبه شفافة */
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+      max-width: 400px;
+      width: 100%;
+      animation: fadeIn 3s ease-in-out;
+    }
+    .info-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ecf0f1; /* لون رمادي فاتح */
+    }
+    .info-section .info-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .info-section .info-item span {
+      font-size: 1rem;
+      color: #bdc3c7; /* لون رمادي فاتح */
+    }
+    .info-section .info-item .value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #ecf0f1; /* لون رمادي فاتح */
+    }
+    .favorites-section {
+      background: rgba(255, 255, 255, 0.1); /* خلفية شبه شفافة */
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+      max-width: 400px;
+      width: 100%;
+      animation: fadeIn 3s ease-in-out;
+    }
+    .favorites-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ecf0f1; /* لون رمادي فاتح */
+    }
+    .favorites-section .favorite-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .favorites-section .favorite-item img {
+      width: 40px;
+      height: 40px;
+      margin-left: 15px;
+      border-radius: 0; /* إزالة الدائرة المحيطة */
+    }
+    .favorites-section .favorite-item i {
+      font-size: 24px;
+      margin-left: 15px;
+      color: #ecf0f1; /* لون رمادي فاتح */
+    }
+    .favorites-section .favorite-item span {
+      font-size: 1.2rem;
+      color: #bdc3c7; /* لون رمادي فاتح */
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+      .info-section h2, .favorites-section h2 {
+        font-size: 1.5rem;
+      }
+      .info-section .info-item span, .favorites-section .favorite-item span {
+        font-size: 0.9rem;
+      }
+      .info-section .info-item .value {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- رسالة التحميل -->
+  <div id="loadingSpinner" style="display: flex; justify-content: center; align-items: center; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000;">
+    <div style="color: #fff; font-size: 1.5rem;">جاري التحميل...</div>
+  </div>
+
+  <!-- صورة ظافر -->
+  <img src="https://scontent.fbgw4-4.fna.fbcdn.net/v/t1.15752-9/482114033_630614936351312_8216899291700564596_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=tnrfUx7Gzq8Q7kNvgE_9Po2&_nc_oc=AdhCtGXuKJJvpryKwLPcp4yOF4ghXw3CRqkUL0yFx64mMnOr3XsNH66MAEX_JUTwZrA&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fbgw4-4.fna&oh=03_Q7cD1wEX_hUMKtzBp6mLkK-y7hbRPmTR4Q6NCGRTO8k-Fy1r6g&oe=67F42126" alt="ظافر علي" class="profile-pic" loading="lazy" onerror="this.src='placeholder.jpg';">
+
+  <h1>ظافر علي</h1>
+  <p>شاب عراقي | عاشق للرياضة | برشلوني</p>
+
+  <div class="social-links">
+    <!-- رابط إنستغرام -->
+    <a href="https://www.instagram.com/_f8sw/" title="إنستغرام" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="إنستغرام" loading="lazy">
+    </a>
+    <!-- رابط فيسبوك -->
+    <a href="https://www.facebook.com/XXS77?mibextid=ZbWKwL" title="فيسبوك" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="فيسبوك" loading="lazy">
+    </a>
+  </div>
+
+  <!-- قسم معلومات عن ظافر -->
+  <div class="info-section">
+    <h2>ظافر علي</h2>
+    <div class="info-item">
+      <span>الطول</span>
+      <span class="value">183 سم</span>
+    </div>
+    <div class="info-item">
+      <span>الوزن</span>
+      <span class="value">66 كجم</span>
+    </div>
+    <div class="info-item">
+      <span>العمر</span>
+      <span class="value">16 سنة</span>
+    </div>
+    <div class="info-item">
+      <span>تاريخ الميلاد</span>
+      <span class="value">2008 يوليو 6</span>
+    </div>
+    <div class="info-item">
+      <span>المهنة</span>
+      <span class="value">طالب مدرسي</span>
+    </div>
+    <div class="info-item">
+      <span>الجنسية</span>
+      <span class="value">عراقي</span>
+    </div>
+  </div>
+
+  <!-- قسم المفضلات والاهتمامات -->
+  <div class="favorites-section">
+    <h2>المفضلات والاهتمامات</h2>
+    <div class="favorite-item">
+      <span>⚽ الفريق المفضل: برشلونة</span>
+    </div>
+    <div class="favorite-item">
+      <span>🌍 المنتخب المفضل: المنتخب الأرجنتيني</span>
+    </div>
+    <div class="favorite-item">
+      <span>⭐ اللاعب المفضل: ميسي / نيمار / لامين يامال</span>
+    </div>
+    <div class="favorite-item">
+      <span>📚 المادة المفضلة: English</span>
+    </div>
+    <div class="favorite-item">
+      <span>🇩🇪 الدولة المفضلة: ألمانيا</span>
+    </div>
+    <div class="favorite-item">
+      <span>⚽ مهتم بالكرة القدم</span>
+    </div>
+    <div class="favorite-item">
+      <span>🐍 مهتم باللغة البايثون</span>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      const loadingSpinner = document.getElementById("loadingSpinner");
+      loadingSpinner.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
